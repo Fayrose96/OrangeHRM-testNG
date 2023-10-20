@@ -1,6 +1,6 @@
 # OrangeHRM Testing with Selenium and TestNG
 
-This project is a demonstration of automated testing for the OrangeHRM application using Selenium WebDriver and TestNG. It showcases how to automate login functionality as an example. You can extend this project to include additional test cases as per your requirements.
+This project is a demonstration of automated testing for the OrangeHRM application using Selenium WebDriver and TestNG. It showcases how to automate login functionality as an example.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ This project is a demonstration of automated testing for the OrangeHRM applicati
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before begin, ensure you have met the following requirements:
 
 - **Java**: Make sure you have Java installed on your system.
 - **WebDriver**: Download the Chrome WebDriver (compatible with your Chrome browser version) and ensure it's in your system's PATH.
