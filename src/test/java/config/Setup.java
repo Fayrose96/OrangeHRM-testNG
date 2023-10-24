@@ -18,6 +18,6 @@ public class Setup {
     }
     @AfterTest
     public void quitDriver(){
-       driver.quit();
+        //driver.quit();
     }
 }
