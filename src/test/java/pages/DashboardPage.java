@@ -21,11 +21,12 @@ public class DashboardPage {
     public DashboardPage(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
-    public void createEmployee(String firstName, String lastName, String username, String password){
+    public void createEmployee(String firstName, String lastName, String username, String password) throws InterruptedException {
         menuItems.get(1).click(); //click PIM
         buttons.get(2).click(); //click add button
         formTextFields.get(1).sendKeys(firstName);
         formTextFields.get(3).sendKeys(lastName);
+        Thread.sleep(200);
         btnSwitch.click(); //toggle switch
         formTextFields.get(5).sendKeys(username);
         formTextFields.get(6).sendKeys(password);
