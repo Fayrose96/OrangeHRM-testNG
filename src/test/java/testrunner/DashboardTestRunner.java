@@ -1,9 +1,9 @@
 package testrunner;
 
 import com.github.javafaker.Faker;
+import config.EmployeeModel;
 import config.Setup;
 import org.json.simple.parser.ParseException;
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
@@ -30,7 +30,14 @@ public class DashboardTestRunner extends Setup {
         String lastName=faker.name().lastName();
         String username=faker.name().username();
         String password=faker.internet().password();
-        dashboardPage.createEmployee( firstName, lastName, username, password ); //create new user
+
+        EmployeeModel model=new EmployeeModel();
+        model.setFirstname(firstName);
+        model.setLastname(lastName);
+        model.setUsername(username);
+        model.setPassword(password);
+
+        dashboardPage.createEmployee(model); //create new user
         Thread.sleep(700);
         /*String textTitleExpected= By.xpath(("//*[contains(text(),\"personal Details\")]")
         ).findElement(driver).getText();
@@ -38,7 +45,7 @@ public class DashboardTestRunner extends Setup {
         if(textTitleExpected.contains("Personal Details")) {
             Utils.saveEmployeeInfo(firstName, lastName, username, password);
         }*/
-        Utils.saveEmployeeInfo(firstName, lastName, username, password);
+        Utils.saveEmployeeInfo(model);
 
     }
 }
